@@ -23,3 +23,33 @@ void Conta::sacar (float valorASacar){
         }
         saldo -= valorASacar;
 }
+void exibeSaldo(const Conta& conta){
+    std:: cout << "O saldo da conta é: " << conta.pegaSaldo() << std:: endl;
+}
+float Conta:: pegaSaldo() const{
+    return saldo;
+}
+
+std:: string Conta:: pegaNome(){
+    return nomeTitular;
+}
+
+std:: string Conta:: pegaCpf(){
+    return cpfTitular;
+}
+
+std:: string Conta:: pegaNumero(){
+    return numeroTitular;
+}
+
+void Conta:: definirNomeTitular(std:: string nome){
+    nomeTitular = nome;
+}
+
+void Conta:: definirCpfTitular(std:: string cpf){
+    cpfTitular = cpf;
+}
+
+void Conta:: definirNumeroTitular(std:: string numero){
+    numeroTitular = numero;
+}
