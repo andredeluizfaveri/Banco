@@ -6,9 +6,9 @@ using namespace std;
 
 int main (){
 
-    Conta umaoutraconta, umaconta;
+    Conta umaoutraconta ("Andre", "062939999999", "222.444-9"), umaconta("Andressa", "99988330221", "111.000-2");
     umaoutraconta.depositar(200);
-    cout << umaconta.pegaSaldo() << endl;
+    cout << umaconta.pegaSaldo() << "Nome: " << umaconta.pegaNome() << endl;
     
     return 0;
 }

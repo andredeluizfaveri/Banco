@@ -5,7 +5,7 @@ class Conta{
 private:
     //Atributos
     std::string numeroTitular, cpfTitular, nomeTitular;
-    float saldo = 0;
+    float saldo;
 
 public:
     //metodo
@@ -16,10 +16,15 @@ public:
     std:: string pegaNome();
     std:: string pegaCpf();
     std:: string pegaNumero();
-    //metodos seter
+    /*metodos seter são os que setam, vamos deixar sem para que não se possa alterar estes atributos posteriormente a criaçao da conta
     void definirNomeTitular(std:: string nome);
     void definirCpfTitular(std:: string cpf);
     void definirNumeroTitular(std:: string numero);
+    */
+
+    Conta (std:: string nome, std:: string cpf, std:: string numero);
+    //Deleta construtor vazio criado por padrão, para não poder criar construtor sem parâmetros.
+    Conta() = delete;
 
 
 
