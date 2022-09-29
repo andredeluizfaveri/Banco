@@ -3,6 +3,11 @@
 
 class Conta{
 private:
+    //Criar uma propriedade que não é do objeto, é da classe Conta::, fazendo assim contar corretamente quantas contas existem.
+    static int numeroDeContas;
+public: 
+    static int pegaNumeroDeContas();
+private:
     //Atributos
     std::string numeroTitular, cpfTitular, nomeTitular;
     float saldo;
@@ -25,6 +30,10 @@ public:
     Conta (std:: string nome, std:: string cpf, std:: string numero);
     //Deleta construtor vazio criado por padrão, para não poder criar construtor sem parâmetros.
     Conta() = delete;
+    // Inicializa método destrutor
+    Conta::~Conta();
+private:
+    void verificaTamanhoDoNome();
 
 
 
