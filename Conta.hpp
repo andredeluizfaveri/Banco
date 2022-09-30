@@ -1,5 +1,6 @@
 #pragma once
 #include<string>
+#include "Titular.hpp"
 
 class Conta{
 private:
@@ -9,7 +10,8 @@ public:
     static int pegaNumeroDeContas();
 private:
     //Atributos
-    std::string numeroTitular, cpfTitular, nomeTitular;
+    std::string numeroTitular;
+    Titular Titular;
     float saldo;
 
 public:
@@ -18,8 +20,6 @@ public:
     void depositar(float valorADepositar);
     //metodos geter
     float pegaSaldo() const;
-    std:: string pegaNome();
-    std:: string pegaCpf();
     std:: string pegaNumero();
     /*metodos seter são os que setam, vamos deixar sem para que não se possa alterar estes atributos posteriormente a criaçao da conta
     void definirNomeTitular(std:: string nome);
@@ -27,13 +27,11 @@ public:
     void definirNumeroTitular(std:: string numero);
     */
 
-    Conta (std:: string nome, std:: string cpf, std:: string numero);
+    Conta (std:: string numero, Titular Titular);
     //Deleta construtor vazio criado por padrão, para não poder criar construtor sem parâmetros.
     Conta() = delete;
     // Inicializa método destrutor
     Conta::~Conta();
-private:
-    void verificaTamanhoDoNome();
 
 
 

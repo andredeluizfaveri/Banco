@@ -1,14 +1,16 @@
 #include <iostream>
 #include <string>
 #include "Conta.hpp"
+#include "Titular.hpp"
 
 using namespace std;
 
 int main (){
-
-    Conta umaoutraconta ("Andre", "062939999999", "222.444-9"), umaconta("Andressa", "99988330221", "111.000-2");
+    Titular Titular("062939999999", "Andre");
+    Conta umaoutraconta ("222.444-9", Titular);
+    Conta umaconta("111.000-2", Titular);
     umaoutraconta.depositar(200);
-    cout << umaconta.pegaSaldo() << "Nome: " << umaconta.pegaNome() << endl;
+    cout << umaconta.pegaSaldo() << "Nome: " << Titular.pegaNome() << endl;
     cout << "Número de contas: " << Conta:: pegaNumeroDeContas << endl;
     
     return 0;
