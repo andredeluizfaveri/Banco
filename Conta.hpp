@@ -11,7 +11,7 @@ public:
 private:
     //Atributos
     std::string numeroTitular;
-    Titular Titular;
+    Titular titular;
     float saldo;
 
 public:
@@ -31,7 +31,7 @@ public:
     //Deleta construtor vazio criado por padrão, para não poder criar construtor sem parâmetros.
     Conta() = delete;
     // Inicializa método destrutor
-    Conta::~Conta();
+    ~Conta();
 
 
 

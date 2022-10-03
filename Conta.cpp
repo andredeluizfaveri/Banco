@@ -8,7 +8,7 @@ int Conta:: numeroDeContas =0; // Inicializar propriedade
 //Usar : depois das definiçoes de recebimento, faz o mesmo trabalho que usar o This
 //Nome disso é inicialization list
 Conta::Conta (std:: string numeroTitular, Titular Titular): 
-    Titular (Titular),
+    titular (Titular),
     numeroTitular(numeroTitular), 
     saldo(0)
 {
