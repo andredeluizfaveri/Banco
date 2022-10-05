@@ -2,9 +2,10 @@
 #include <iostream>
 int Titular:: numerodetitulares =0;
 
-Titular::Titular(std::string cpf, std::string nome): cpf(cpf), nome(nome){
+Titular::Titular(Cpf cpf, std::string nome): cpf(cpf), nome(nome){
     verificaTamanhoDoNome();
     Titular:: numerodetitulares++;
+    std:: cout << "Nmeroooo de titulares: " << numerodetitulares << std::endl;
 }
 int Titular:: peganumerodetitulares(){
     return numerodetitulares;
@@ -19,6 +20,4 @@ std:: string Titular:: pegaNome(){
     return nome;
 }
 
-std:: string Titular:: pegaCpf(){
-    return cpf;
-}
+

@@ -7,12 +7,14 @@ int Conta:: numeroDeContas =0; // Inicializar propriedade
 //podendo assim, passar parâmetros já quando é criado a conta
 //Usar : depois das definiçoes de recebimento, faz o mesmo trabalho que usar o This
 //Nome disso é inicialization list
-Conta::Conta (std:: string numeroTitular, Titular Titular): 
-    titular (Titular),
+Conta::Conta (std:: string numeroTitular, Titular titular): 
+    titular (titular),
     numeroTitular(numeroTitular), 
     saldo(0)
 {
     Conta:: numeroDeContas ++; // Conta somente quando é criado nova conta.
+    std:: cout << "Nmeroooo de Contas: " << numeroDeContas << std::endl;
+
 }
 
 int Conta:: pegaNumeroDeContas(){

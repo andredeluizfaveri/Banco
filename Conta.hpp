@@ -1,6 +1,7 @@
 #pragma once
 #include<string>
 #include "Titular.hpp"
+#include "Cpf.hpp"
 
 class Conta{
 private:
@@ -27,7 +28,7 @@ public:
     void definirNumeroTitular(std:: string numero);
     */
 
-    Conta (std:: string numero, Titular Titular);
+    Conta (std:: string numero, Titular titular);
     //Deleta construtor vazio criado por padrão, para não poder criar construtor sem parâmetros.
     Conta() = delete;
     // Inicializa método destrutor
